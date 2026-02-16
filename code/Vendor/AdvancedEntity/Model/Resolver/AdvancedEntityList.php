@@ -46,6 +46,13 @@ class AdvancedEntityList implements ResolverInterface
                 'entity_id' => (int)$entity->getId(),
                 'name'      => $entity->getName(),
                 'status'    => (int)$entity->getStatus(),
+                'code'    => (int)$entity->getCode(),
+                'description'    => $entity->getDescription(),
+                'website'    => $entity->getWebsite(),
+                'sort_order'    => $entity->getSortOrder(),
+                'image'    => $entity->getImage(),
+                'created_at' => $entity->getCreatedAt(),
+                'updated_at' => $entity->getUpdatedAt()
             ];
         }
 

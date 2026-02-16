@@ -40,11 +40,13 @@ interface AdvancedEntityInterface
     const ENTITY_ID = 'entity_id';
     const NAME = 'name';
     const STATUS = 'status';
-    // const CODE = 'code'; --- IGNORE ---
+     const CODE = 'code'; 
     const DESCRIPTION = 'description';
     const WEBSITE = 'website';
     const SORT_ORDER = 'sort_order';
     const IMAGE = 'image';
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
 
     public function getId();
     public function getName(): string;
@@ -54,6 +56,8 @@ interface AdvancedEntityInterface
     public function getWebsite(): string;
     public function getSortOrder(): string;
     public function getImage(): string;
+    public function getCreatedAt();
+    public function getUpdatedAt();
 
 
     // public function setId(int $id): self;

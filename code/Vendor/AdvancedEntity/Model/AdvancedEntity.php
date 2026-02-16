@@ -1,7 +1,7 @@
 <?php
 namespace Vendor\AdvancedEntity\Model;
 
-
+use Vendor\AdvancedEntity\Api\Data\AdvancedEntityInterface;
 use Magento\Framework\Model\AbstractModel;
 
 
@@ -15,7 +15,7 @@ use Magento\Framework\Model\AbstractModel;
  * @extends AbstractModel
  * @implements EntityInterface
  */
-class AdvancedEntity extends AbstractModel
+class AdvancedEntity extends AbstractModel implements AdvancedEntityInterface
 {
     protected function _construct()
     {
@@ -83,25 +83,25 @@ class AdvancedEntity extends AbstractModel
         return $this->setData(self::IMAGE, $image);
     }
 
-    public function getCreatedAt(): string
+    public function getCreatedAt()
     {
-        return (string)$this->getData(self::CREATED_AT);
+        return ($this->getData(self::CREATED_AT));
     }
 
-    public function setCreatedAt(string $createdAt): self
-    {    
-        return $this->setData(self::CREATED_AT, $createdAt);
-    }
+    // public function setCreatedAt(string $createdAt): self
+    // {    
+    //     return $this->setData(self::CREATED_AT, $createdAt);
+    // }
 
-    public function getUpdatedAt(): string
+    public function getUpdatedAt()
     {
-        return (string)$this->getData(self::UPDATED_AT);
+        return ($this->getData(self::UPDATED_AT));
     }
 
-    public function setUpdatedAt(string $updatedAt): self
-    {    
-        return $this->setData(self::UPDATED_AT, $updatedAt);
-    }
+    // public function setUpdatedAt(string $updatedAt): self
+    // {    
+    //     return $this->setData(self::UPDATED_AT, $updatedAt);
+    // }
 
     public function getWebsite(): string
     {
